@@ -1,5 +1,5 @@
 /* ============================================================
-   Yubin Jang — personal academic site
+   Yeonsu Kwak — personal academic site
    Single-page scroll. No build step, no dependencies.
    ============================================================ */
 
@@ -185,6 +185,26 @@ a{ color:inherit; }
   margin:0 0 20px;
 }
 
+/* research keywords under the role line. They sit between two blocks of running
+   text, so they are set small and ruled rather than boxed. */
+.tags{
+  list-style:none;
+  margin:0 0 30px;
+  padding:0;
+  display:flex; flex-wrap:wrap;
+  gap:8px 10px;
+  max-width:56ch;
+}
+.tags li{
+  font-size:.79rem;
+  letter-spacing:.02em;
+  color:var(--ink-soft);
+  border:1px solid var(--rule);
+  border-radius:999px;
+  padding:4px 13px;
+  background:color-mix(in srgb, var(--bg-alt) 55%, transparent);
+}
+
 .hero__lede{
   margin:0 0 34px;
   max-width:52ch;
@@ -299,12 +319,30 @@ a{ color:inherit; }
 .timeline__what strong{ font-weight:600; }
 .timeline__what em{ color:var(--muted); font-size:.9em; }
 
+/* a full-width band of short capability notes, sitting under the two columns */
+.factbar{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:clamp(24px, 3.4vw, 46px);
+  margin-top:clamp(38px, 5vw, 62px);
+  border-top:1px solid var(--rule);
+  padding-top:28px;
+}
+.factbar .side__note{ margin:0; max-width:42ch; }
+
 /* ---------------------------------------------------------- RESEARCH STRANDS */
 
 .strands{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(266px, 1fr));
   gap:clamp(26px, 3.6vw, 46px);
+}
+
+/* four strands read better as two rows of two than as one thin row of four,
+   which is what the auto-fit track would give at the wrap width */
+.strands--four{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+@media (max-width:760px){
+  .strands--four{ grid-template-columns:1fr; }
 }
 
 .strand{
