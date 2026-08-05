@@ -1,9 +1,10 @@
-# yubinjang.github.io
+# yeonsukwak
 
-Personal academic website for **Yubin Jang**, Ph.D. candidate in Education and Social Policy at
-the University of Delaware.
+Personal academic website for **Yeonsu Kwak**, Ph.D. candidate in Chemical and Biomolecular
+Engineering at the University of Delaware.
 
-Live at **[yubinjang.github.io](https://yubinjang.github.io)**
+Served from this repository at the custom domain in `CNAME`. See `PUBLISH.md` for the publishing
+checklist.
 
 ## Built with
 
@@ -22,6 +23,8 @@ Type is [Spectral](https://fonts.google.com/specimen/Spectral) and
 │   ├── js/main.js      nav, scroll spy, reveal, publication tabs
 │   └── img/
 ├── cv/                 CV as PDF
+├── CNAME               custom domain for GitHub Pages
+├── PUBLISH.md          publishing checklist, in Korean
 └── .nojekyll           serve files as-is, no Jekyll processing
 ```
 

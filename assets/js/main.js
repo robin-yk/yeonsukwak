@@ -1,4 +1,4 @@
-/* Yubin Jang — site behaviour. Vanilla JS, no dependencies. */
+/* Yeonsu Kwak — site behaviour. Vanilla JS, no dependencies. */
 (function () {
   'use strict';
 
